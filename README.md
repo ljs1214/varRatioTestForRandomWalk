@@ -1,9 +1,6 @@
 
 # `variance_ratio_test`
 
-## Title
-Variance Ratio Test
-
 ## Usage
 ```r
 variance_ratio_test(S, q, types)
