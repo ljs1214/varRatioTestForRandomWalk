@@ -53,8 +53,8 @@ variance_ratio_test <- function(S, q, types) {
       m <- q * (n*q - q + 1) * (1 - q / (n*q))
       VC <- sum((S[seq(1 + q, (n*q + 1))] - S[seq(1, (n*q - q + 1))] - q*muhat)^2) / m
       VA <- sum((S[seq(2, (n*q + 1))] - S[seq(1, n*q)] - muhat)^2) / (n*q - 1)
-      z_star_q <- (VC / VA - 1) / sqrt(phi_star_q)
-      pvalue <- (1 - pnorm(abs(z_star_q))) * 2
+      zscore <- (VC / VA - 1) / sqrt(phi_star_q)
+      pvalue <- (1 - pnorm(abs(zscore))) * 2
     }
   }
   conclusion <- ifelse(pvalue < 0.05,
