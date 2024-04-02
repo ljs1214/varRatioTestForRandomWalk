@@ -12,6 +12,7 @@
 #' adf_test(prices)
 
 adf_test <- function(X) {
+  library(tseries)
   # Ensure the input is numeric
   if (!is.numeric(X)) {
     stop("X must be a numeric vector.")
